@@ -14,17 +14,11 @@ namespace Teste.Entities
 
         public override double TotalTax()
         {
-            double tax = 0;
-
             if (AnuualIncome >= 20_000 && HealthExpense >= 0)
             {
-                tax = (AnuualIncome * 25 / 100) - (HealthExpense * 50 / 100);
+                return (AnuualIncome * 25 / 100) - (HealthExpense * 50 / 100);
             }
-            else if (AnuualIncome < 20_000 && HealthExpense >= 0)
-            {
-                tax = (AnuualIncome * 15 / 100) - (HealthExpense * 50 / 100);
-            }
-            return tax;
+            return (AnuualIncome * 15 / 100) - (HealthExpense * 50 / 100);
         }
     }
 }
